@@ -22,8 +22,6 @@ export const Navbar = () => {
           <img className="coffee-icon" src={CoffeeIcon} alt="coffee-icon" />
           Buy Me a Coffee
         </Button>
-        <Button type="secondary" >Click</Button>
-        
       </div>
     </nav>
   );
