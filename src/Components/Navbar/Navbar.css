@@ -6,7 +6,10 @@
   padding: 15px 7%;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  box-sizing: border-box;
 }
+
 .user-login-register-container {
   display: flex;
   align-items: center;
@@ -27,9 +30,11 @@
   cursor: pointer;
   transition: 0.3s;
 }
+
 .nav-item:hover {
   color: #ffcc33;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -58,4 +63,104 @@
 
 .coffee-icon {
   width: 18px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger .bar:nth-child(1).open {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger .bar:nth-child(2).open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburger .bar:nth-child(3).open {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #111111;
+  padding: 0 7%;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  padding: 20px 7%;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-nav-item {
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 5px 0;
+  border-bottom: 1px solid #222;
+}
+
+.mobile-nav-item:hover {
+  color: #ffcc33;
+}
+
+.mobile-coffee-btn {
+  padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-item-container,
+  .user-login-register-container {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .name-holder {
+    font-size: 1rem;
+  }
 }

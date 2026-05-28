@@ -1,0 +1,140 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 60px 7%;
+  background-color: #0b0b0b;
+  color: white;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-name {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfcfcf;
+  max-width: 600px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #ffcc33;
+  color: black;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #ffcc33;
+  color: #ffcc33;
+}
+
+.btn-secondary:hover {
+  background-color: #ffcc33;
+  color: black;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
