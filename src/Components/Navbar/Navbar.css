@@ -117,6 +117,7 @@
 }
 
 .mobile-menu.active {
+  max-height: 500px;
   padding: 20px 7%;
 }
 
